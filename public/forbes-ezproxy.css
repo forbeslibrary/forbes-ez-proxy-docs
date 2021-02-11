@@ -8,6 +8,7 @@ body {
 	min-height: 100vh;
 	font-size: large;
 	font-family: sans-serif;
+	box-sizing: border-box;
 }
 form {
 	padding: 1em;
@@ -59,6 +60,7 @@ header {
 	margin: 2vh 0 1vh 0;
 }
 footer {
+	margin: 1vh 0 2vh 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -79,6 +81,9 @@ a:hover {
 img {
 	max-width: 100%;
 }
+#messages {
+	width: 20em;
+}
 #messages p {
 	margin: 0.5em;
 }
@@ -95,7 +100,8 @@ img {
 
 /* Use form that spans page only on small screens in portrait mode */
 @media (max-aspect-ratio: 1/1) and (max-width: 25em) {
-  form {
+	form,
+	#messages {
 		width: 100%;
 	}
 	input[type=text],
