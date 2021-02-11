@@ -1,0 +1,113 @@
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 100vh;
+	font-size: large;
+	font-family: sans-serif;
+}
+form {
+	padding: 1em;
+	box-sizing: border-box;
+	box-shadow: 0 0 1em grey;
+	font-size: 1.2em;
+	width: 20em;
+}
+form h1 {
+	margin: 0;
+}
+form ul {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+}
+li {
+	margin: 1ex 0;
+}
+label {
+	display: block;
+}
+input[type=text],
+input[type=password] {
+	padding: 0.5ex 1ex;
+	font-size: 0.8em;
+	width: 18.75em;
+}
+input[type=submit] {
+	font-size: 1.5em;
+	font-weight: bold;
+	width: 100%;
+	padding: 0.5ex;
+	border-radius: 1em;
+	border: solid 0.125em #722327;
+	background-color: #722327;
+	color: white;
+	box-shadow: 0.125em 0.125em 0.25em grey;
+}
+input[type=submit]:hover,
+input[type=submit]:focus {
+	background-color: #8c474a;
+	border-color: #8c474a;
+}
+header {
+	margin: 2vh 0 1vh 0;
+}
+footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0.5em 0;
+}
+footer * {
+	margin: 0.25em 1em;
+	text-align: center;
+	flex-grow: 1;
+}
+a,
+a:visited {
+	color: #722327;
+}
+a:hover {
+	color: #006c64;
+}
+img {
+	max-width: 100%;
+}
+#messages p {
+	margin: 0.5em;
+}
+#messages p#alert {
+	font-weight: bold;
+	border: red solid 0.25em;
+	padding: 0.5em;
+	margin: 0;
+	box-sizing: border-box;
+}
+#login-link {
+	font-size: 3em;
+}
+
+/* Use form that spans page only on small screens in portrait mode */
+@media (max-aspect-ratio: 1/1) and (max-width: 25em) {
+  form {
+		width: 100%;
+	}
+	input[type=text],
+	input[type=password] {
+		width: 80vw;
+	}
+}
+
+/* Cap max height */
+@media (min-height: 50em) {
+	body {
+		height: 50em;
+		min-height: 50em;
+	}
+}
