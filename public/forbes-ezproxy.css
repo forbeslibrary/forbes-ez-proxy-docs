@@ -82,7 +82,7 @@ img {
 	max-width: 100%;
 }
 #messages {
-	width: 20em;
+	width: 25em;
 }
 #messages p {
 	margin: 0.5em;
@@ -98,10 +98,16 @@ img {
 	font-size: 3em;
 }
 
+/* Full width messages on small screens */
+@media (max-width: 30em) {
+	#messages {
+		width: 100%;
+	}
+}
+
 /* Use form that spans page only on small screens in portrait mode */
 @media (max-aspect-ratio: 1/1) and (max-width: 25em) {
-	form,
-	#messages {
+	form {
 		width: 100%;
 	}
 	input[type=text],
