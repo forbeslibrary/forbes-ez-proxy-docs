@@ -46,15 +46,14 @@ input[type=submit] {
 	width: 100%;
 	padding: 0.5ex;
 	border-radius: 1em;
-	border: solid 0.125em #722327;
-	background-color: #722327;
+	border: solid 0.125em #244860;
+	background-color: #244860;
 	color: white;
 	box-shadow: 0.125em 0.125em 0.25em grey;
 }
 input[type=submit]:hover,
 input[type=submit]:focus {
-	background-color: #8c474a;
-	border-color: #8c474a;
+	filter:brightness(1.2);
 }
 header {
 	margin: 2vh 0 1vh 0;
@@ -73,10 +72,10 @@ footer * {
 }
 a,
 a:visited {
-	color: #722327;
+	color: #c24e3d;
 }
-a:hover {
-	color: #006c64;
+a:hover, a:active {
+	filter: brightness(1.2);
 }
 img {
 	max-width: 100%;
@@ -89,7 +88,7 @@ img {
 }
 #messages p#alert {
 	font-weight: bold;
-	border: red solid 0.25em;
+	border: #ec8672 solid 0.25em;
 	padding: 0.5em;
 	margin: 0;
 	box-sizing: border-box;
@@ -113,13 +112,5 @@ img {
 	input[type=text],
 	input[type=password] {
 		width: 80vw;
-	}
-}
-
-/* Cap max height */
-@media (min-height: 50em) {
-	body {
-		height: 50em;
-		min-height: 50em;
 	}
 }
